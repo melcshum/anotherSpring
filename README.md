@@ -4,11 +4,19 @@
 ##Setup the Postgres database
 
 docker run --name postgres-spring -e POSTGRES_PASSWORD=password -d -p 5432:5432 postgres:alpine  
-ee276cd705509672da75227de8506b0735f1e5bde74d36a3ecfdd1b0b04cd3a0
 
 
- 
+#check the port 
 docker port postgres-spring 
+
+#connect with docker
+docker exec -it 1561e60c5b01d82e16f59fc2687a3402209336f6cf8e4778b0ac66bdf12b7887  bin/bash
+
+##connect with postgres
+
+bash-5.0# psql -U postgres
+
+
 
 ##Reference from 
 
